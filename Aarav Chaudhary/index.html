@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061a3c" />
+
+  <title>Aarav Chaudhary Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background effects -->
+  <div class="ocean" id="ocean" aria-hidden="true"></div>
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+  <canvas id="waveCanvas" aria-hidden="true"></canvas>
+
+  <!-- Header -->
+  <header>
+    <a class="logo" href="#home" aria-label="Aarav home">
+      Aarav<br />Chaudhary
+    </a>
+
+    <!-- <button
+      class="menu"
+      id="menuBtn"
+      type="button"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button> -->
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button
+        class="pill utility"
+        id="themeBtn"
+        type="button"
+        aria-label="Switch color theme"
+        title="Switch theme"
+      >
+        ◐
+      </button>
+
+      <button
+        class="pill utility"
+        id="soundBtn"
+        type="button"
+        aria-label="Toggle background music"
+        aria-pressed="false"
+        title="Toggle background music"
+      >
+        ♫
+      </button>
+
+      <select
+        id="musicSelect"
+        class="pill utility music-select"
+        aria-label="Choose background music"
+      >
+        <option value="music/the_mountain-instrumental- 01.mp3">
+          Music 1
+        </option>
+        <option value="music/atlasaudio-uplifting-uplifting-music-02.mp3">
+          Music 2
+        </option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="glass hero-card">
+        <div class="profile-row">
+          <div class="photo-wrap">
+            <img
+              id="studentPhoto"
+              src="image/Aaaro.png"
+              alt="Aarav Chaudhary"
+            />
+          </div>
+
+          <div class="hero-copy">
+            <div class="eyebrow">Hello, I'm</div>
+
+            <h1>
+              <span>Aarav<br />Chaudhary</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="subtitle">
+          <span id="typingText">A Future Creator</span>
+          <span class="typing-caret">|</span>
+        </div>
+
+        <p class="intro">
+          Exploring ideas, building projects, and learning new things
+          every day. Welcome to my little corner of the internet.
+        </p>
+
+        <div class="hero-actions">
+          <a class="pill primary" href="#about">
+            View My Page&nbsp; →
+          </a>
+        </div>
+
+        <div class="mini-note">
+          <span class="status"></span>
+          Curious mind · Class 6 · Big dreams
+        </div>
+      </div>
+
+      <!-- Portfolio Cards -->
+      <div class="card-grid" aria-label="Portfolio sections">
+        <article class="glass tile" data-modal="Projects">
+          <div>
+            <div class="icon">🚀</div>
+            <h2>Projects</h2>
+            <p>My creative school projects and ideas</p>
+          </div>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="glass tile" data-modal="Skills">
+          <div>
+            <div class="icon">📊</div>
+            <h2>Skills</h2>
+            <p>What I’m learning and exploring</p>
+          </div>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="glass tile" data-modal="Hobbies">
+          <div>
+            <div class="icon">🎮</div>
+            <h2>Hobbies</h2>
+            <p>Games, science, drawing and more</p>
+          </div>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="glass tile" data-modal="Achievements">
+          <div>
+            <div class="icon">🏆</div>
+            <h2>Achievements</h2>
+            <p>Certificates, awards and milestones</p>
+          </div>
+          <span class="arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="section-head">
+        <div class="eyebrow">A little about me</div>
+        <h2>Small steps. Big imagination.</h2>
+        <p>
+          Every day is a new chance to discover something amazing.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="glass info-card">
+          <h3>👋 Who I Am</h3>
+          <p>
+            I’m Aarav, a Class 6 student who loves asking questions,
+            learning new things, and turning ideas into little projects.
+            This portfolio is where I share my learning journey.
+          </p>
+        </article>
+
+        <article class="glass info-card" id="skills">
+          <h3>🧠 Things I’m Exploring</h3>
+          <p>
+            From solving tricky maths problems to discovering how
+            science works, I enjoy learning by trying things out.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Mathematics</span>
+            <span class="tag">Science</span>
+            <span class="tag">Reading</span>
+            <span class="tag">Creative Thinking</span>
+            <span class="tag">Basic Coding</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="section-head">
+        <div class="eyebrow">Made with curiosity</div>
+        <h2>My Project Universe</h2>
+        <p>
+          A place for school work, experiments and ideas in progress.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="glass project">
+          <div class="project-art">🪐</div>
+          <h3>Solar System</h3>
+          <p>
+            A learning project exploring planets, moons and our place
+            in space.
+          </p>
+        </article>
+
+        <article class="glass project">
+          <div class="project-art">🌱</div>
+          <h3>Science Journal</h3>
+          <p>
+            Notes, observations and small experiments from my science
+            learning.
+          </p>
+        </article>
+
+        <article class="glass project">
+          <div class="project-art">🧩</div>
+          <h3>Maths Challenge</h3>
+          <p>
+            Puzzles and problems that help me practise logical thinking.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="glass goal">
+        <div class="eyebrow">Looking ahead</div>
+        <h2>Curious today. Creating tomorrow.</h2>
+
+        <p>
+          I’m just getting started. As I learn new things, this space
+          will grow with my projects, ideas and achievements.
+        </p>
+
+        <div class="hero-actions" style="justify-content: center">
+          <a class="pill primary" href="mailto:hello@example.com">
+            Say Hello ↗
+          </a>
+
+          <a class="pill secondary" href="#home">
+            Back to Top ↑
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span>
+      © <span id="year"></span>
+      <a
+        href="https://stackvix.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="stackvix-link"
+      >
+        StackVix ↗
+      </a>
+    </span>
+
+    <span>Every Big Idea Starts with Curiosity</span>
+
+    <button
+      class="pill utility"
+      id="backTop"
+      type="button"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+  </footer>
+
+  <!-- Information Modal -->
+  <div
+    class="modal-backdrop"
+    id="modalBackdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <div class="glass modal">
+      <button
+        class="close"
+        id="closeModal"
+        type="button"
+        aria-label="Close dialog"
+      >
+        ×
+      </button>
+
+      <div class="eyebrow">Explore this space</div>
+
+      <h3 id="modalTitle">Projects</h3>
+
+      <p id="modalText">
+        This section will grow as new ideas and experiences are added.
+      </p>
+
+      <button class="pill primary" id="modalOkay" type="button">
+        Sounds good ✓
+      </button>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="backgroundMusic" preload="none"></audio>
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
